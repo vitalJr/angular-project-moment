@@ -4,6 +4,19 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Need to run "yarn server" to start the servidor before to run the angular application.
 
+<h2>Image One</h2>
+![1](https://user-images.githubusercontent.com/11637810/228855909-e0ff2feb-17a9-459a-a563-203d4b51282f.png)
+
+<h2>Image two</h2>
+![2](https://user-images.githubusercontent.com/11637810/228855978-e32aeb5e-0335-4c2d-af1d-6ad2ca70d6c8.png)
+
+<h2>Image three</h2>
+![3](https://user-images.githubusercontent.com/11637810/228856055-debb34cc-5328-4a5b-90f8-42900399890f.png)
+
+<h2>Image four</h2>
+![4](https://user-images.githubusercontent.com/11637810/228856074-94430ab6-da94-43f3-972a-5030720b297e.png)
+
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
