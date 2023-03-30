@@ -1,0 +1,8 @@
+<div *ngIf="moment">
+  <h2>Edit the <span>moment</span></h2>
+  <app-moment-form
+    [momentData]="moment"
+    [btnText]="btnText"
+    (onSubmit)="editHandler($event)"
+  ></app-moment-form>
+</div>

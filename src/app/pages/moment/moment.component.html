@@ -1,0 +1,44 @@
+<div class="moment" *ngIf="moment">
+  <h1>{{ moment.title }}</h1>
+  <img src="{{ localImage }}/{{ moment.image }}" alt="{{ moment.title }}" />
+  <div class="about-moment">
+    <h3>About this moment</h3>
+    <p>{{ moment.description }}</p>
+  </div>
+  <div class="action">
+    <h3>Action:</h3>
+    <a routerLink="/moments/edit/{{ moment.id }}" class="edit-btn">
+      <fa-icon [icon]="faEdit"></fa-icon> Edit
+    </a>
+    <button class="remove-btn" (click)="removeHandle(moment.id!)">
+      <fa-icon [icon]="faTimes"></fa-icon> Delete
+    </button>
+  </div>
+  <div class="comments">
+    <h3>
+      Comments: {{ moment.comments!.length > 0 ? moment.comments!.length : 0 }}
+    </h3>
+    <div *ngIf="moment.comments!.length > 0; else noComents">
+      <div class="comment-container" *ngFor="let comment of moment.comments">
+        <p class="comment">{{ comment.text }}</p>
+        <p class="author">por:{{ comment.username }}</p>
+      </div>
+    </div>
+    <ng-template #noComents>
+      <p>Don't exist comments</p>
+    </ng-template>
+  </div>
+  <div class="comment-form">
+    <h3>Put a comment:</h3>
+    <form>
+      <div class="form-group">
+        <label for="text">Comment</label>
+        <textarea placeholder="What you want to comment?" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="username">Name:</label>
+        <input type="text" placeholder="Write your name" />
+      </div>
+    </form>
+  </div>
+</div>
